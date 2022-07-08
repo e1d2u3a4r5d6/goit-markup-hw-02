@@ -27,7 +27,19 @@ body{
  color:var(--currentcolor) ;
 }  
 .list{
+ 
   list-style: none;
+ }
+ .list>a{
+   text-decoration: none;
+ }
+ .list-text{
+  font-family:'Roboto';
+  font-weight: 400;
+ font-size: 16px;
+ line-height:1.87 ;
+ letter-spacing: 0.03em;
+ color:var(--body-color) ;
  }
  .feature>.feature-text{
    list-style: none;
@@ -37,7 +49,6 @@ body{
  }
  
  /* Верхняя линия */
-
 
 .logo{
  text-decoration: none;
@@ -194,6 +205,8 @@ background-color:var(--brund-color) ;
 /*  Фильтр*/
 
 .filter{
+  font-family: inherit;
+  font-weight:500;
   font-size: 16px;
   line-height:1.62 ;
   background-color:var(--team-color) ;
