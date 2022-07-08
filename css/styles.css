@@ -3,7 +3,6 @@
   --brund-color:#2196F3;
   --text-color:#212121;
   --section-color:#2F303A;
-  --button-color:#FFFFFF;
   --team-color:#F5F4FA ;
   --studio-color:#000000;
   --link-contacts-color:#757575;
@@ -26,15 +25,15 @@ body{
 .current>a {
  color:var(--currentcolor) ;
 }  
+
 .list{
- 
-  list-style: none;
+ list-style: none;
  }
  .list>a{
    text-decoration: none;
  }
  .list-text{
-  font-family:'Roboto';
+  font-family:'Roboto', sans-serif;
   font-weight: 400;
  font-size: 16px;
  line-height:1.87 ;
@@ -54,25 +53,25 @@ body{
  text-decoration: none;
 }
   .web{
-  font-family:'Raleway' ;
+  font-family:'Raleway', sans-serif ;
   font-weight: 700;
   font-size: 26px; 
   line-height: 1.19;
   color:var(--brund-color);
  }
 .studio{
- font-family:'Raleway' ;
+ font-family:'Raleway', sans-serif ;
  font-weight: 700;
  font-size: 26px;
  line-height :1.19;
   color: var(--studio-color);
 }
 .studio-footer{
- font-family:'Raleway' ;
+ font-family:'Raleway', sans-serif ;
  font-weight: 700;
  font-size: 26px;
  line-height :1.19;
- color:var(--button-color) ;
+ color:var(--body-background-color);
 }
   
 .link{
@@ -82,16 +81,13 @@ color:var(--text-color) ;
 text-decoration: none;
 letter-spacing: 0.02em;
 }
-.link:hover{
+.link:hover,
+.link:focus,
+.link:active,
+.link-contacts:hover,
+.link-contacts:focus{
  color:var(--brund-color);
 }
-.link:focus{
- color:var(--brund-color);
-}
-.link:active{
- color:var(--brund-color);
-}
-
 .link-contacts{
  font-weight: 500;
  line-height:1.14;
@@ -99,12 +95,9 @@ letter-spacing: 0.02em;
  text-decoration: none;
  letter-spacing: 0.02em;
 }
-.link-contacts:hover{
- color:var(--brund-color);
+.line{
+  border: 1px solid #ECECEC;
 }
-.link-contacts:focus{
-   color:var(--brund-color);
- }
 
 /* Шапка */
 .servise{
@@ -113,21 +106,24 @@ background-color:var(--section-color);
 h1{
  font-size: 44px;
  line-height:1.36;
- color:var(--button-color);
+ color:var(--body-background-color);
  letter-spacing: 0.06em;
  text-transform: uppercase;
 }
 .button{
-background-color:var(--brund-color) ;
+  background-color:var(--brund-color) ;
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.15) ;
   border-radius: 4px; 
-  border: none;
+  border: 0;
+}
+.button:hover{
+  background-color: #188CE8;
 }
 .button-text{ 
  font-weight: 700;
  font-size: 16px;
  line-height: 1.87;
- color:var(--button-color) ;
+ color:var(--body-background-color);
  letter-spacing: 0.06em;
 }
 .button, 
@@ -157,16 +153,21 @@ background-color:var(--brund-color) ;
    background-color:var(--team-color) ;
  }
  .team-title{
-  
    font-size:36px ;
    line-height: 1.16;
    color:var(--text-color) ;   
  }
 .team-names{ 
     font-size: 16px;
-     line-height:1.18;  
+     line-height:1.18;   
 }
-
+.team-names>li{
+  background-color:var(--body-background-color); 
+  box-shadow:0px 1px 3px rgba(0, 0, 0, 0.12 ),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2) ;
+  border-radius:0px 0px 4px 4px ;
+}
  .team-name{
     font-size: 16px;
     line-height:1.18;
@@ -181,27 +182,23 @@ background-color:var(--brund-color) ;
 .address-link{
   font-style: normal;
   line-height: 1.71;
-   color: var(--button-color);
+   color: var(--body-background-color);
    text-decoration: none;
 }
-.address-link:hover{
+.address-link:hover,
+.address-link:focus,
+.address-link-tel:hover,
+.address-link-tel:focus{
  color: var(--brund-color);
   }
-.address-link:focus{
- color:var(--brund-color);
-}
+
 .address-link-tel{
   font-style: normal;
   line-height: 1.71;
   color:var(--address-link-tel-color);
   text-decoration: none;
 }
-.address-link-tel:hover{
- color:var(--brund-color);
-}
-.address-link-tel:focus{
- color:var(--brund-color);
-}
+
 /*  Фильтр*/
 
 .filter{
@@ -214,14 +211,15 @@ background-color:var(--brund-color) ;
   border-radius: 4px;
   border: none;
 }
-.filter:hover{
- background-color:var(--brund-color) ;
- color:var(--button-color);
-}
+.filter:hover,
 .filter:focus{
- background-color:var(--brund-color) ;
- color:var(--button-color);
+  background-color:var(--brund-color) ;
+  color:var(--body-background-color);
+  box-shadow:0px 3px 1px rgba(0, 0, 0, 0.1 ),
+  0px 1px 2px rgba(0, 0, 0, 0.08 ),
+  0px 2px 2px rgba(0, 0, 0, 0.12 );
 }
+
 /* Проекты */
 .title { 
  font-size: 16px;
